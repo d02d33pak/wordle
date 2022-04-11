@@ -16,36 +16,36 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const Row = ({rowIndex = 0}) => {
+const Row = ({ rowIndex = 0 }) => {
   const col = [0, 1, 2, 3, 4];
   return (
     <RowContainer>
-      {col.map(colIndex => <Input id={`${rowIndex}${colIndex}`} key={`${rowIndex}${colIndex}`}  />)}
+      {col.map(colIndex => <Input id={`${rowIndex}${colIndex}`} key={`${rowIndex}${colIndex}`} />)}
     </RowContainer>
   )
 }
 
 const App = () => {
-  const rows = [0,1,2,3,4,5];
+  const rows = [0, 1, 2, 3, 4, 5];
   const [cursor, setCursor] = useState('00');
-  
-  
+
+
   useEffect(() => {
     const inputElem = document.getElementById(cursor);
-    if(inputElem) inputElem.focus();
+    if (inputElem) inputElem.focus();
   }, [cursor]);
 
 
   return (
     <>
-    <Header title="WORDLE" />
-    <Container>
-      {
-        rows.map(row => <Row rowIndex={row} />)
-      }
-    </Container>
+      <Header title="WORDLE" />
+      <Container>
+        {
+          rows.map(row => <Row rowIndex={row} />)
+        }
+      </Container>
     </>
-    
+
   );
 }
 
