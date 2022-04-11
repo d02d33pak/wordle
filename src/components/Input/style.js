@@ -1,4 +1,4 @@
-import styledComponents from "styled-components";
+import styled from "styled-components";
 
 export const InputBox = styled.input`
     margin: 4px;
@@ -12,6 +12,6 @@ export const InputBox = styled.input`
     text-transform: uppercase;
     caret-color: transparent;
     &:focus {
-        background-color: ;
+        background-color: #bbb;
     };
 `;
